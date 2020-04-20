@@ -18,7 +18,8 @@ steps:
      jdkVersionOption: '1.11'
      jdkArchitectureOption: 'x64'
      publishJUnitResults: false
-     goals: 'package'
+     goals: 'spring-boot:run'
+#     goals: 'package'
 
 #steps:
 #- task: ShellScript@2
