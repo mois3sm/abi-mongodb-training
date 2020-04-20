@@ -9,18 +9,18 @@ trigger:
 pool:
   vmImage: 'ubuntu-latest'
 
-# steps:
-# - task: Maven@3
-#   inputs:
-#     mavenPomFile: 'pom.xml'
-#     mavenOptions: '-Xmx3072m'
-#     javaHomeOption: 'JDKVersion'
-#     jdkVersionOption: '1.11'
-#     jdkArchitectureOption: 'x64'
-#     publishJUnitResults: false
-#     goals: 'package'
+ steps:
+ - task: Maven@3
+   inputs:
+     mavenPomFile: 'pom.xml'
+     mavenOptions: '-Xmx3072m'
+     javaHomeOption: 'JDKVersion'
+     jdkVersionOption: '1.11'
+     jdkArchitectureOption: 'x64'
+     publishJUnitResults: false
+     goals: 'package'
 
-steps:
-- task: ShellScript@2
-  inputs:
-    scriptPath: 'local/start_environment.sh'
+#steps:
+#- task: ShellScript@2
+#  inputs:
+#    scriptPath: 'local/start_environment.sh'
