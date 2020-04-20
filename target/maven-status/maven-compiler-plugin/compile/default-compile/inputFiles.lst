@@ -1,6 +1,0 @@
-/home/mmonteiro/cit/abi/training/abi-mongodb-training/src/main/java/com/abi/mongodb/training/models/User.java
-/home/mmonteiro/cit/abi/training/abi-mongodb-training/src/main/java/com/abi/mongodb/training/AbiMongodbTrainingApplication.java
-/home/mmonteiro/cit/abi/training/abi-mongodb-training/src/main/java/com/abi/mongodb/training/repository/UserRepository.java
-/home/mmonteiro/cit/abi/training/abi-mongodb-training/src/main/java/com/abi/mongodb/training/controller/UserController.java
-/home/mmonteiro/cit/abi/training/abi-mongodb-training/src/main/java/com/abi/mongodb/training/service/UserService.java
-/home/mmonteiro/cit/abi/training/abi-mongodb-training/src/main/java/com/abi/mongodb/training/config/SwaggerConfig.java
