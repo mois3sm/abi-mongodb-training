@@ -48,7 +48,7 @@ public class UserController {
     }
 
     @ApiOperation(value = "Delete users")
-    @PatchMapping(value = "/users/update", produces = MediaType.APPLICATION_JSON_VALUE)
+    @PatchMapping(value = "/users/delete", produces = MediaType.APPLICATION_JSON_VALUE)
     public String deleteUser(@RequestParam("id") String id) {
         userService.deleteUser(id);
         return String.format("Id user %s deleted success!", id);
