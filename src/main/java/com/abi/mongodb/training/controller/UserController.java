@@ -7,6 +7,7 @@ import io.swagger.annotations.ApiOperation;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.MediaType;
 import org.springframework.ui.Model;
+import org.springframework.web.bind.annotation.DeleteMapping;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PatchMapping;
 import org.springframework.web.bind.annotation.PathVariable;
@@ -47,14 +48,14 @@ public class UserController {
     }
 
     @ApiOperation(value = "Delete users")
-    @PatchMapping(value = "/users/delete", produces = MediaType.APPLICATION_JSON_VALUE)
+    @DeleteMapping(value = "/users/delete", produces = MediaType.APPLICATION_JSON_VALUE)
     public String deleteUser(@RequestParam("id") String id) {
         userService.deleteUser(id);
         return String.format("Id user %s deleted success!", id);
     }
 
     @ApiOperation(value = "List all users")
-    @PatchMapping(value = "/users/listAll", produces = MediaType.APPLICATION_JSON_VALUE)
+    @GetMapping(value = "/users/listAll", produces = MediaType.APPLICATION_JSON_VALUE)
     public List<User> listAllUsers() {
         return userService.getAllUsers();
     }
