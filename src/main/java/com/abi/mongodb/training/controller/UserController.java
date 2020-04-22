@@ -9,6 +9,7 @@ import org.springframework.http.MediaType;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.GetMapping;
+import org.springframework.web.bind.annotation.PatchMapping;
 import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestParam;
@@ -37,4 +38,20 @@ public class UserController {
         String id = userService.addUser(user);
         return id;
     }
+
+    @ApiOperation(value = "Update users")
+    @PatchMapping(value = "/users/update", produces = MediaType.APPLICATION_JSON_VALUE)
+    public User updateUser(@RequestParam("id") String id, @RequestParam("firstName") String firstName, @RequestParam("lastName") String lastName,
+                          @RequestParam("email") String email, Model model) {
+        User user = User.builder().id(id).firstName(firstName).lastName(lastName).email(email).build();
+        return userService.updateUser(user);
+    }
+
+    @ApiOperation(value = "Delete users")
+    @PatchMapping(value = "/users/update", produces = MediaType.APPLICATION_JSON_VALUE)
+    public String deleteUser(@RequestParam("id") String id) {
+        userService.deleteUser(id);
+        return String.format("Id user %s deleted success!", id);
+    }
+
 }

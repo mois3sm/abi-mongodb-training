@@ -19,4 +19,12 @@ public class UserService {
         user = userRepository.insert(user);
         return user.getId();
     }
+
+    public void deleteUser(String id) {
+        userRepository.deleteById(id);
+    }
+
+    public User updateUser(User user) {
+        return userRepository.save(user);
+    }
 }
