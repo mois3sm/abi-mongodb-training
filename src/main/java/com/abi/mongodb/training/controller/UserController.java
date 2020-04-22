@@ -6,7 +6,6 @@ import io.swagger.annotations.Api;
 import io.swagger.annotations.ApiOperation;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.MediaType;
-import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PatchMapping;
@@ -15,7 +14,7 @@ import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.bind.annotation.RestController;
 
-import java.util.StringJoiner;
+import java.util.List;
 
 @RestController
 @Api(value = "UserController")
@@ -52,6 +51,12 @@ public class UserController {
     public String deleteUser(@RequestParam("id") String id) {
         userService.deleteUser(id);
         return String.format("Id user %s deleted success!", id);
+    }
+
+    @ApiOperation(value = "List all users")
+    @PatchMapping(value = "/users/listAll", produces = MediaType.APPLICATION_JSON_VALUE)
+    public List<User> listAllUsers() {
+        return userService.getAllUsers();
     }
 
 }
