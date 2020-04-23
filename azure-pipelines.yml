@@ -4,9 +4,12 @@
 # https://docs.microsoft.com/azure/devops/pipelines/languages/java
 #trigger:
 #  - master
-pr:
-  - master
-  - releases/*
+branches:
+  include:
+    - master
+    - releases/*
+  exclude:
+    - releases/old*
 variables:
   # Azure Resource Manager connection created during pipeline creation
   azureSubscription: '16b5820b-2f28-4f9e-89ec-7c63a87b5c52'
