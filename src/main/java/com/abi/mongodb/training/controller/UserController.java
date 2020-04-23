@@ -30,7 +30,7 @@ public class UserController {
         return userService.getUser(id);
     }
 
-    @ApiOperation(value = "Add users")
+    @ApiOperation(value = "Add users test")
     @PostMapping(value = "/users/add", produces = MediaType.APPLICATION_JSON_VALUE)
     public String addUser(@RequestParam("firstName") String firstName, @RequestParam("lastName") String lastName,
                           @RequestParam("email") String email, Model model) {
