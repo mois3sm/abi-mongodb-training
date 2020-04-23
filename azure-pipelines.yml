@@ -2,8 +2,11 @@
 # Build your Java project and deploy it to Azure as a Linux web app
 # Add steps that analyze code, save build artifacts, deploy, and more:
 # https://docs.microsoft.com/azure/devops/pipelines/languages/java
-trigger:
+#trigger:
+#  - master
+pr:
   - master
+  - releases/*
 variables:
   # Azure Resource Manager connection created during pipeline creation
   azureSubscription: '16b5820b-2f28-4f9e-89ec-7c63a87b5c52'

@@ -92,4 +92,31 @@
 		</plugins>
 	</build>
 
+<!--	<distributionManagement>-->
+<!--		<repository>-->
+<!--			<id>artifacts-mvn-abi-mongodb-training</id>-->
+<!--			<url>https://pkgs.dev.azure.com/moisesmonte/abi-mongodb-training/_packaging/artifacts-mvn-abi-mongodb-training/maven/v1</url>-->
+<!--			<releases>-->
+<!--				<enabled>true</enabled>-->
+<!--			</releases>-->
+<!--			<snapshots>-->
+<!--				<enabled>true</enabled>-->
+<!--			</snapshots>-->
+<!--		</repository>-->
+<!--	</distributionManagement>-->
+
+
+	<repositories>
+	<repository>
+		<id>artifacts-mvn-abi-mongodb-training</id>
+		<url>https://pkgs.dev.azure.com/moisesmonte/abi-mongodb-training/_packaging/artifacts-mvn-abi-mongodb-training/maven/v1</url>
+		<releases>
+			<enabled>true</enabled>
+		</releases>
+		<snapshots>
+			<enabled>true</enabled>
+		</snapshots>
+	</repository>
+	</repositories>
+
 </project>
